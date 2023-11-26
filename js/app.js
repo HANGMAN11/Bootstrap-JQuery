@@ -16,5 +16,25 @@ $(document).ready(function(){
         loopCount: Infinity,
         startDelay: 1000
     })
+        //progress bars
+    var waypoint = new Waypoint({
+        element: document.getElementById('exp-id'),
+        handler: function(direction) {
+            var p = document.querySelectorAll(".progress-bar");
+            p[0].setAttribute("style", "width:100%;transition: 1s all");
+            p[1].setAttribute("style", "width:70%;transition:1.5s all");
+            p[2].setAttribute("style", "width:81%;transition:1.6s all");
+            p[3].setAttribute("style", "width:50%;transition:1.7s all");
+        }, 
+        offset:'90%'
+      })
+    //Owl Carousel
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            autoplay:true,
+            autoplayTimeout:4000,
+            items:1
+        })
+
 })
 
